@@ -6,6 +6,7 @@ import * as HelloWorldEndpoint from 'Frontend/generated/HelloWorldEndpoint';
 import { html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { View } from '../../views/view';
+import 'Frontend/test-component/test-component';
 
 @customElement('hello-world-view')
 export class HelloWorldView extends View {
@@ -18,8 +19,8 @@ export class HelloWorldView extends View {
 
   render() {
     return html`
-      <vaadin-text-field label="Your name" @value-changed=${this.nameChanged}></vaadin-text-field>
-      <vaadin-button @click=${this.sayHello}>Say hello</vaadin-button>
+    Test Component:
+      <test-component></test-component>
     `;
   }
 
